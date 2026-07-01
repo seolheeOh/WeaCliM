@@ -1,0 +1,4 @@
+01JUL2026 update.
+
+This capsule includes the code and files required to reproduce the results presented in Main Fig. 2 of the manuscript. 
+All scripts in <figure2> should be executed sequentially in the numerical order indicated by their filenames.
