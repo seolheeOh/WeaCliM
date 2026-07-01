@@ -1,19 +1,14 @@
-# WeaCliM
-Source code and analysis scripts for the WeaCliM framework described in the accompanying manuscript. This capsule includes software for model training, evaluation, and reproducing Main Fig. 2.
-
 # WeaCliM: Self-Supervised Learning of Climate Signals from Weather Fields
 
 ## Overview
 
-This repository contains the source code, datasets, and analysis scripts associated with the manuscript:
+This repository contains the source code, datasets, and analysis scripts used in the manuscript:
 
-**"Self-Supervised Learning of Climate Signals from Weather Fields for Global Climate Forecasts"**
+"Self-Supervised Learning of Climate Signals from Weather Fields for Global Climate Forecasts"
 
-WeaCliM is a self-supervised climate prediction framework that learns climate representations from daily weather fields through Bootstrap Your Own Latent (BYOL) pretraining and subsequently trains lightweight downstream regressors for seasonal precipitation prediction.
+WeaCliM is a self-supervised climate prediction framework that first pretrains a general encoder using the Bootstrap Your Own Latent (BYOL) algorithm and subsequently trains lightweight downstream regressors for seasonal precipitation prediction.
 
-The repository includes the complete software pipeline for WeaCliM and the reference CNN models, including model training, prediction, Grad-CAM analysis, feature extraction, and figure generation.
-
-For reproducibility, the scripts and required files to reproduce **Main Fig. 2** of the manuscript are provided in `figures/figure2/`.
+This capsule includes the code and files required to reproduce the results presented in <Main Fig. 2> of the manuscript. The complete repository additionally contains the source code for model training, Grad-CAM analysis, feature analysis, and figure generation.
 
 ---
 
@@ -38,7 +33,14 @@ For reproducibility, the scripts and required files to reproduce **Main Fig. 2**
 
 ### Dataset/
 
-The datasets used in this study are publicly available. ERA5 reanalysis data are available from the ECMWF repository (https://www.ecmwf.int/en/forecasts/dataset/ecmwf-reanalysisv5). Seasonal dynamical prediction outputs from the North American Multi-Model Ensemble (NMME) are available through the International Research Institute for Climate and Society (IRI) Data Library (https://iridl.ldeo.columbia.edu). Additional seasonal forecasts used for comparisons of extreme precipitation index anomalies are available from the Copernicus Climate Data Store (https://cds.climate.copernicus.eu/datasets/seasonal-original-single-levels). Global Precipitation Climatology Project (GPCP) precipitation data are available from the Copernicus Climate Data Store (https://cds.climate.copernicus.eu/datasets/satellite-precipitation). The processed datasets required to reproduce the results presented in this study are provided in the accompanying Code Ocean capsule.
+Contains the NetCDF datasets used for model training and evaluation.
+
+The directory includes
+
+- daily weather fields used for WeaCliM pretraining and prediction,
+- monthly-mean weather fields used for the reference CNN model,
+- seasonal precipitation anomalies used as prediction targets,
+- dynamical model outputs (Dyn and NMME) used for performance comparison in Main Fig. 2.
 
 ---
 
@@ -66,7 +68,6 @@ These scripts perform
 ---
 
 ### GradCam/
-
 Contains scripts for generating Grad-CAM outputs from the WeaCliM and reference CNN models. These outputs were used to produce Extended Data Figs. 3 and 4.
 ---
 
