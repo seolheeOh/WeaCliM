@@ -33,14 +33,7 @@ This capsule includes the code and files required to reproduce the results prese
 
 ### Dataset/
 
-Contains the NetCDF datasets used for model training and evaluation.
-
-The directory includes
-
-- daily weather fields used for WeaCliM pretraining and prediction,
-- monthly-mean weather fields used for the reference CNN model,
-- seasonal precipitation anomalies used as prediction targets,
-- dynamical model outputs (Dyn and NMME) used for performance comparison in Main Fig. 2.
+The datasets used in this study are publicly available. ERA5 reanalysis data are available from the ECMWF repository (https://www.ecmwf.int/en/forecasts/dataset/ecmwf-reanalysisv5). Seasonal dynamical prediction outputs from the North American Multi-Model Ensemble (NMME) are available through the International Research Institute for Climate and Society (IRI) Data Library (https://iridl.ldeo.columbia.edu). Additional seasonal forecasts used for comparisons of extreme precipitation index anomalies are available from the Copernicus Climate Data Store (https://cds.climate.copernicus.eu/datasets/seasonal-original-single-levels). Global Precipitation Climatology Project (GPCP) precipitation data are available from the Copernicus Climate Data Store (https://cds.climate.copernicus.eu/datasets/satellite-precipitation). The processed datasets required to reproduce the results presented in this study are provided in the accompanying Code Ocean capsule.
 
 ---
 
@@ -68,6 +61,7 @@ These scripts perform
 ---
 
 ### GradCam/
+
 Contains scripts for generating Grad-CAM outputs from the WeaCliM and reference CNN models. These outputs were used to produce Extended Data Figs. 3 and 4.
 ---
 
